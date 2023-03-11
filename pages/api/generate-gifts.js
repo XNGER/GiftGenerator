@@ -86,10 +86,9 @@ export default async function (req, res) {
 }
 // Bu fonksiyon, metin tamamlama modeline gönderilecek olan tamamlama metnini oluşturur. Bu, priceMin, priceMax, gender, age ve hobbies değişkenlerini kullanarak bir metin oluşturur.
 function generatePrompt(priceMin, priceMax, gender, age, hobbies) {
-  return `${priceMin}₺ ile ${priceMax}₺ 
-  fiyatları arasında, ${age} yaşında bir 
-  ${gender} için ${hobbies} 
-  ile alakali 3 hediye öner.`
+  return `Suggest 3 gift ideas about ${hobbies} between ${priceMin}₺ and ${priceMax}₺ 
+  prices for a ${age} years old 
+  ${gender}`
 }
 
 // TEST KODU
